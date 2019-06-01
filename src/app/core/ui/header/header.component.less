@@ -1,0 +1,57 @@
+@import (reference) "../../../../styles/global.less";
+
+.header {
+  height: @header-height;
+  background-color: #282828;
+  padding: 6px 16px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color: whitesmoke;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  .header-logo {
+    float: left;
+    #logo-img {
+      float: left;
+      width: 50px;
+      height: 40px;
+    }
+
+    .logo-title {
+      padding: 0px 10px 0px 10px;
+      margin: 0px;
+      float: left;
+      line-height: 40px;
+    }
+
+    #logo-title-full {
+      display: inline;
+    }
+    #logo-title-short {
+      display: none;
+    }
+  }
+
+  .user-actions {
+    height: 100%;
+    float: right;
+
+    button {
+      height: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .header{
+    .header-logo {
+      #logo-title-full {
+        display: none;
+      }
+      #logo-title-short {
+        display: inline;
+      }
+    }
+  }
+
+}
